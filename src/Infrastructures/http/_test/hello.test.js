@@ -13,6 +13,6 @@ describe('GET /hello', () => {
     // Assert
     expect(response.status).toEqual(200);
     expect(responseJson.status).toEqual('success');
-    expect(responseJson.data.message).toEqual('Hello Dunia');
+    expect(responseJson.data.message).toEqual('Hello World');
   });
 });
