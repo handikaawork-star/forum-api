@@ -7,6 +7,7 @@ import authentications from '../../Interfaces/http/api/authentications/index.js'
 import threads from '../../Interfaces/http/api/threads/index.js';
 import comments from '../../Interfaces/http/api/comments/index.js';
 import replies from '../../Interfaces/http/api/replies/index.js';
+import hello from '../../Interfaces/http/api/hello/index.js';
 import swaggerSpec from './swagger.js';
 
 const createServer = async (container) => {
@@ -24,6 +25,7 @@ const createServer = async (container) => {
   app.use('/threads', threads(container));
   app.use('/threads/:threadId/comments', comments(container));
   app.use('/threads/:threadId/comments/:commentId/replies', replies(container));
+  app.use('/hello', hello());
 
   // Global error handler
   app.use((error, req, res, next) => {

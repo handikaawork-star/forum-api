@@ -10,6 +10,9 @@
     "test": "vitest --run",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --coverage",
+    "test:unit": "vitest run src/Domains src/Applications src/Commons src/Interfaces",
+    "test:integration": "vitest run src/Infrastructures/repository src/Infrastructures/security",
+    "test:functional": "vitest run src/Infrastructures/http",
     "migrate": "node-pg-migrate",
     "migrate:test": "node-pg-migrate --envPath .test.env",
     "lint": "eslint ./"
