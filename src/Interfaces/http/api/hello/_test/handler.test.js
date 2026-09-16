@@ -20,7 +20,7 @@ describe('HelloHandler', () => {
       expect(res.json).toBeCalledWith({
         status: 'success',
         data: {
-          message: 'Hello World!',
+          message: 'Hello World',
         },
       });
     });
